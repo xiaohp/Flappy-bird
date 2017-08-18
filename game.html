@@ -31,7 +31,7 @@
     <body>
         <canvas id="id-canvas" width="400" height="600"></canvas>
         <hr>
-        <input id=id-input-speed type="range" value="1">
+        <input id=id-input-speed type="range" value="1" min="1" max="60">
         <div class="gua-controls">
             <!-- <div class="">
                 <label>
@@ -58,7 +58,7 @@
                 var t = `
                 <div class="">
                     <label>
-                        <input type="range" class="gua-auto-slider" value="${item.value}" data-value="config.${key}">${item._comment}
+                        <input type="range" max="300" class="gua-auto-slider" value="${item.value}" data-value="config.${key}">${item._comment}
                         <span class="gua-label"></span>
                     </label>
                 </div>`
@@ -83,15 +83,14 @@
                     label.innerText = v
                 })
             }
-            var __controlmMain = function() {
+            var __main = function() {
                 // 从配置文件生成控件
                 insertControls()
                 // 绑定事件
                 bindEvents()
 
             }
-            
-            __controlmMain()
+            __main()
 
         </script>
     </body>

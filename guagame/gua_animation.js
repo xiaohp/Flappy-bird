@@ -12,7 +12,6 @@ class GuaAnimation {
         }
         this.animationName = 'idle'
         this.texture = this.frames()[0]
-        log('debug', this.frames(), '---', this.animations, '---', this.texture )
         this.w = this.texture.width
         this.h = this.texture.height
         this.frameIndex = 0
@@ -74,20 +73,10 @@ class GuaAnimation {
         context.translate(-w2, -h2)
 
         context.drawImage(this.texture, 0, 0)
-
         context.restore()
     }
     move(x, keyStatus) {
         this.flipX = x < 0
         this.x += x
-        // var animationNames = {
-        //     down: 'run',
-        //     up: 'idle',
-        // }
-        // var name = animationNames[keyStatus]
-        // this.changeAnimation(name)
-    }
-    changeAnimation(name) {
-        this.animationName = name
     }
 }
