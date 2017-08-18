@@ -16,15 +16,14 @@
         <script src='guagame/gua_label.js'></script>
         <script src='guagame/gua_animation.js'></script>
         <script src='guagame/gua_partical_system.js'></script>
-        <!-- 场景文件 -->
-        <script src='scene/main/paddle.js'></script>
-        <script src='scene/main/ball.js'></script>
-        <script src='scene/main/block.js'></script>
+
+        <!-- 主场景文件 -->
         <script src='scene/main/scene.js'></script>
 
         <!-- 结束和标题场景 -->
         <script src='scene/end/scene_end.js'></script>
         <script src='scene/title/scene_title.js'></script>
+
         <!-- 配置数据 -->
         <script src='config.js'></script>
     </head>
@@ -33,13 +32,7 @@
         <hr>
         <input id=id-input-speed type="range" value="1" min="1" max="60">
         <div class="gua-controls">
-            <!-- <div class="">
-                <label>
-                    <input type="range" class="gua-auto-slider" name="" value="" data-value="config.player_speed">玩家速度：
-                    <span class="gua-label"></span>
-                </label>
-            </div> -->
-            <!-- <textarea id="id-text-log" rows="20" cols="50"></textarea> -->
+
         </div>
 
         <script src=main.js></script>
@@ -54,6 +47,7 @@
                     })
                 }
             }
+
             var templateControl = function(key, item) {
                 var t = `
                 <div class="">
@@ -64,6 +58,7 @@
                 </div>`
                 return t
             }
+
             var insertControls = function() {
                 var div = e('.gua-controls')
                 var keys = Object.keys(config)
@@ -73,6 +68,7 @@
                     div.insertAdjacentHTML('beforeend', html)
                 }
             }
+
             var bindEvents = function() {
                 bindAll('.gua-auto-slider', 'input', function(event) {
                     var target = event.target
@@ -83,6 +79,7 @@
                     label.innerText = v
                 })
             }
+
             var __main = function() {
                 // 从配置文件生成控件
                 insertControls()

@@ -50,7 +50,6 @@ class GuaAnimation {
         if (this.rotation < 45) {
             this.rotation += 5
         }
-        // log('animation updata', this.frameCount)
         this.frameCount--
         if (this.frameCount == 0) {
             this.frameCount = 3
