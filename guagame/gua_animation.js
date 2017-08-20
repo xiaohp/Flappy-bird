@@ -2,15 +2,12 @@ class GuaAnimation {
     constructor(game) {
         this.game = game
         // 为了省事，在这里 hard core 一套动画
-        this.animations = {
-            idle: [],
-        }
+        this.animations = []
         for (var i = 1; i < 4; i++) {
             var name = `b${i}`
             var t = game.textureByName(name)
-            this.animations['idle'].push(t)
+            this.animations.push(t)
         }
-        this.animationName = 'idle'
         this.texture = this.frames()[0]
         this.w = this.texture.width
         this.h = this.texture.height
@@ -28,7 +25,7 @@ class GuaAnimation {
         return new this(game)
     }
     frames() {
-        return this.animations[this.animationName]
+        return this.animations
     }
     jump() {
         this.vy = -10
