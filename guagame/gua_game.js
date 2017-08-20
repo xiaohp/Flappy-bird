@@ -1,4 +1,3 @@
-// 瓜
 class GuaGame {
     constructor(fps, images, runCallback) {
         window.fps = fps
