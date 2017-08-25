@@ -25,6 +25,8 @@ var __main = function() {
         bg: 'img/bg.png',
         pipe: 'img/pipe.png',
         ground: 'img/ground.png',
+        title: 'img/title.png',
+        over: 'img/game_over.png',
         b1: 'img/b1.png',
         b2: 'img/b2.png',
         b3: 'img/b3.png',
